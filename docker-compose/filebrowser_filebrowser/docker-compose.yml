@@ -1,0 +1,20 @@
+---
+    version: "2.1"
+    services:
+      filebrowser:
+        image: filebrowser/filebrowser
+        container_name: filebrowser
+
+        environment:
+          - PUID=1000
+          - PGID=1000
+
+        volumes:
+          - /home/guido/:/srv
+          - /home/guido/docker_projects/filebrowser_filebrowser/database/filebrowser.db:/database/filebrowser.db
+          - /home/guido/docker_projects/filebrowser_filebrowser/config/settings.json:/config/settings.json
+
+        ports:
+          - 8082:80
+          
+        restart: unless-stopped
