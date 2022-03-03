@@ -1,3 +1,3 @@
-###Boilerplates for Automation and Deployment
+#Boilerplates for Deployment
 
-These are my templates and configurations I use in various projects and deployment scenarios.
+Some templates and configurations I use in various deployment scenarios in my HomeLab projects.
