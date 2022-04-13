@@ -59,6 +59,10 @@ links:
     icon: "fab fa-linkedin"
     url: "https://www.linkedin.com/in/guido-ricioppo/"
     target: "_blank" # optional html a tag target attribute
+  - name: "Services Status"
+    icon: "fab fa-angellist"
+    url: "https://statuspage.freshping.io/60775-GuidonsHomeLab"
+    target: "_blank" # optional html a tag target attribute
     
   # - name: "Homer's Wiki"
   #   icon: "fas fa-book"
@@ -96,7 +100,24 @@ services:
         subtitle: "torrent web client"
         tag: "plex"
         url: "http://192.168.1.10:8081/"
-        services:
+      - name: "Sonarr"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-random"
+        subtitle: "Automatic TV Shows Download Handling "
+        tag: "plex"
+        url: "http://192.168.1.10:8989/"
+      - name: "Radarr"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-random"
+        subtitle: "Automatic Movies Download Handling "
+        tag: "plex"
+        url: "http://192.168.1.10:7878/"
+      - name: "ombi"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-book"
+        subtitle: "request content by youself"
+        tag: "plex"
+        url: "http://192.168.1.10:3579/"
   - name: "File Explorer"
     icon: "fas fa-folder-open"
     items:
@@ -107,5 +128,29 @@ services:
         tag: "file_explorer"
         url: "http://192.168.1.10:8082/"
         target: "_blank" # optional html a tag target attribute
+  - name: "VPN remote access"
+    icon: "fas fa-cloud-meatball"
+    items:
+      - name: "File Browser"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-folder-open"
+        #subtitle: "guidoserver home media lab"
+        tag: "file_explorer"
+        url: "http://192.168.10.1:8082/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Plex"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-play"
+        subtitle: "guidoserver home media lab"
+        tag: "plex"
+        url: "http://192.168.10.1:32400/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "qBittorrent"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-cloud-download-alt"
+        subtitle: "torrent web client"
+        tag: "plex"
+        url: "http://192.168.10.1:8081/"
+
 
   

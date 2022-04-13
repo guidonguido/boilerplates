@@ -1,0 +1,22 @@
+---
+version: "2.1"
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - /home/guido/docker_projects/linuxserver_radarr/config:/config
+      - /home/guido/data:/data
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+    networks:
+      - media
+
+networks:
+  media:
+    external: true

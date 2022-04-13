@@ -1,0 +1,22 @@
+---
+version: "2.1"
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - /home/guido/docker_projects/linuxserver_sonarr/config:/config
+      - /home/guido/data:/data
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+    networks:
+      - media
+
+networks:
+  media:
+    external: true
