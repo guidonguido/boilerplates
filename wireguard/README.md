@@ -2,10 +2,10 @@
 
 -  Set  `net.ipv4.ip_forward=1`
     
--   Allow connections to wireguard service: `sudo ufw allow 51820/udp`
+-  Allow connections to wireguard service: `sudo ufw allow 51820/udp`
     
--   Enable wireguard service `sudo systemctl enable wg-quick@wg0.service`
-- Create VPN service to start up WireGuard at boot
+-  Enable wireguard service `sudo systemctl enable wg-quick@wg0.service`
+-  Create VPN service to start up WireGuard at boot
     -   `sudo systemctl start wg-quick@wg0.service` if not starting automatically ad Boot
     
     `sudo wg-quick **up**/**down** wg0` Both on Client and Server
