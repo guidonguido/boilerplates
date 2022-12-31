@@ -15,8 +15,20 @@ services:
       - 8989:8989
     restart: unless-stopped
     networks:
+      - proxy
       - media
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.sonarr.rule=Host(`sonarr.guidongui.com`)"
+      - "traefik.http.routers.sonarr.entrypoints=web, websecure"
+      - "traefik.http.routers.sonarr.tls.certresolver=production"
+      - "traefik.http.services.sonarr.loadbalancer.server.port=8989"
+      - "traefik.protocol=https"
+      - "traefik.http.routers.sonarr.middlewares=traefik-forward-auth"
 
 networks:
   media:
+    external: true
+  proxy:
     external: true

@@ -22,11 +22,12 @@
           
         labels:
           - "traefik.enable=true"
-          - "traefik.http.routers.homer.rule=Host(`landing.guidongui.it`)"
+          - "traefik.http.routers.homer.rule=Host(`landing.guidongui.com`)"
           - "traefik.http.routers.homer.entrypoints=web, websecure"
           - "traefik.http.routers.homer.tls.certresolver=production"
           - "traefik.http.services.homer.loadbalancer.server.port=8080"
-          - "traefik.protocol=http"
+          - "traefik.protocol=https"
+          - "traefik.http.routers.homer.middlewares=traefik-forward-auth"
           
     networks:
       proxy:

@@ -19,8 +19,22 @@ services:
       - 8081:8081
     restart: unless-stopped
     networks:
+      - proxy
       - media
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.torrent.rule=Host(`torrent.guidongui.com`)"
+      - "traefik.http.routers.torrent.entrypoints=web, websecure"
+      - "traefik.http.routers.torrent.tls.certresolver=production"
+      - "traefik.http.services.torrent.loadbalancer.server.port=8081"
+      - "traefik.protocol=https"
+      - "traefik.http.routers.torrent.middlewares=traefik-forward-auth"
 
 networks:
   media:
     external: true
+  proxy:
+    external: true
+    
+    
