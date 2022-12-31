@@ -1,0 +1,22 @@
+---
+version: '3.5'
+services:
+  postgres:
+    container_name: postgres
+    image: guidongui/postgres
+    build: ./
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: gsopOTafPQaOYHGtWs0axZf5Sc
+      PGDATA: /data/postgres
+    volumes:
+       - ./dbdata:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
