@@ -56,7 +56,7 @@
           
         labels:
           - "traefik.enable=true"
-          - "traefik.http.routers.plex.rule=Host(`plex.guidongui.it`)"
+          - "traefik.http.routers.plex.rule=Host(`plex.guidongui.com`)"
           - "traefik.http.routers.plex.entrypoints=web, websecure"
           - "traefik.http.routers.plex.tls.certresolver=production"
           - "traefik.http.services.plex.loadbalancer.server.port=32400"
