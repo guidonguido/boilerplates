@@ -9,6 +9,9 @@ services:
       - "443:443"
       # (Optional) Expose Dashboard
     #  - "8083:8080"  # Don't do this in production!
+    environment:
+      - CF_API_EMAIL=cloudflareloginemail@gmail.com
+      - CF_API_KEY=yourCloudflareAPItoken
     volumes:
 #      - /home/guido/docker_projects/traefik/log:/traefik/log
       - /home/guido/docker_projects/traefik/config/traefik.yml:/traefik.yml:ro

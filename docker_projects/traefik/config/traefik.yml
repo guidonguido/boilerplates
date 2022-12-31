@@ -50,15 +50,21 @@ certificatesResolvers:
       email: asd@asdasd.it
       storage: /etc/traefik/certs/acme.json
       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
-      httpChallenge:
-        entryPoint: web
+      dnsChallenge:
+        provider: cloudflare
+        resolvers:
+          - "1.1.1.1:53"
+          - "1.0.0.1:53"
   production:
     acme:
       email: asd@asdasd.it
       storage: /etc/traefik/certs/acme.json
       caServer: "https://acme-v02.api.letsencrypt.org/directory"
-      httpChallenge:
-        entryPoint: web
+      dnsChallenge:
+        provider: cloudflare
+        resolvers:
+          - "1.1.1.1:53"
+          - "1.0.0.1:53"
 
 # (Optional) Overwrite Default Certificates
 # tls:
