@@ -146,6 +146,23 @@ services:
         tag: "file_explorer"
         url: "http://192.168.x.x:8082/"
         target: "_blank" # optional html a tag target attribute
+  - name: "Observability"
+    icon: "fas fa-folder-open"
+    items:
+      - name: "Grafana"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-folder-open"
+        #subtitle: "guidoserver home media lab"
+        tag: "observability"
+        url: "http://192.168.x.x:3000/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Prometheous"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-folder-open"
+        #subtitle: "guidoserver home media lab"
+        tag: "observability"
+        url: "http://192.168.x.x:9090/"
+        target: "_blank" # optional html a tag target attribute
   - name: "VPN remote access"
     icon: "fas fa-cloud-meatball"
     items:
@@ -187,6 +204,20 @@ services:
         subtitle: "request content by youself"
         tag: "plex"
         url: "http://192.168.x.x:3579/"
+      - name: "Grafana"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-folder-open"
+        #subtitle: "guidoserver home media lab"
+        tag: "observability"
+        url: "http://192.168.x.x:3000/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Prometheous"
+        # logo: "assets/tools/sample.png"
+        icon: "fas fa-folder-open"
+        #subtitle: "guidoserver home media lab"
+        tag: "observability"
+        url: "http://192.168.x.x:9090/"
+        target: "_blank" # optional html a tag target attribute
 
 
   
