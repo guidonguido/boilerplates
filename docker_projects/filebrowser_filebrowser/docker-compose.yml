@@ -14,7 +14,7 @@
           - /home/guido/docker_projects/filebrowser_filebrowser/database/filebrowser.db:/database/filebrowser.db
           - /home/guido/docker_projects/filebrowser_filebrowser/config/settings.json:/config/settings.json
         
-        labels:
+        # labels:
           # - "traefik.enable=true"
           # - "traefik.http.routers.filebrowser.rule=Host(`files.guidongui.com`)"
           # - "traefik.http.routers.filebrowser.entrypoints=web, websecure"
