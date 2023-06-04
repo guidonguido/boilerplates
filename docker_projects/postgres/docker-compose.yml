@@ -7,7 +7,7 @@ services:
     build: ./
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: gsopOTafPQaOYHGtWs0axZf5Sc
+      POSTGRES_PASSWORD: yourpostgrespassword
       PGDATA: /data/postgres
     volumes:
        - ./dbdata:/data/postgres

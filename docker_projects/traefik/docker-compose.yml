@@ -37,14 +37,15 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
       - "traefik.http.services.forwardauth.loadbalancer.server.port=4181"
-      - "traefik.http.routers.forwardauth.entrypoints=web, websecure"
+      - "traefik.http.routers.forwardauth.entrypoints=websecure"
       - "traefik.http.routers.forwardauth.rule=Path(`/_oauth`)"
+      - "traefik.http.routers.forwardauth.tls.certresolver=production"
       - "traefik.http.routers.forwardauth.middlewares=traefik-forward-auth"
-      - "traefik.protocol=http"
-      # - "traefik.http.routers.traefik-forward-auth.tls.certresolver=production"
+      #- "traefik.protocol=http"
       - "traefik.http.middlewares.traefik-forward-auth.forwardauth.address=http://forwardauth:4181"
       - "traefik.http.middlewares.traefik-forward-auth.forwardauth.authResponseHeaders=X-Forwarded-User"
       - "traefik.http.middlewares.traefik-forward-auth.forwardauth.trustForwardHeader=true"
+    restart: unless-stopped
   whoami:
     image: "nginxdemos/hello"
     container_name: "simple-service"
