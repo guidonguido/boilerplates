@@ -1,0 +1,14 @@
+---
+
+- name: Play Oh My Zsh
+  hosts: ubuntu_lab               # HostGroup Name
+  # become: true
+  roles:
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: guido
+      oh_my_zsh_plugins:
+        - git
+      oh_my_zsh_theme: aussiegeek
+      oh_my_zsh_update_mode: auto
+      oh_my_zsh_update_frequency: 14
