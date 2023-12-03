@@ -1,0 +1,9 @@
+---
+telethon:
+  api_id: 12345678
+  api_hash: telegramApiHash
+  phone_number: "+391234567890"
+  channel_id: -1000123456789
+  session_path: "/db/file_uploader.session"
+uploader:
+  downloads_path: "/downloads"

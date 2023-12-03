@@ -1,0 +1,3 @@
+telethon
+pdf2image
+cfg_load[all]

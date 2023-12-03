@@ -1,0 +1,168 @@
+---
+telethon:
+  api_id: 12345678
+  api_hash: telegramApiHash
+  phone_number: "+391234567890"
+  channel_id: -1000123456789
+  session_path: /db/message_scraper.session
+scraper:
+  start_interval: 45400
+  domain: katfile
+  crawl_job_path: /crawljobs
+  db_path: /db/sqlite_sdatabase.db
+  exclusion_list:
+    - Milano
+    - Roma
+    - Napoli
+    - Torino
+    - Palermo
+    - Genova
+    - Bologna
+    - Firenze
+    - Bari
+    - Catania
+    - Venezia
+    - Verona
+    - Messina
+    - Padova
+    - Trieste
+    - Taranto
+    - Brescia
+    - Prato
+    - Reggio Calabria
+    - Modena
+    - Parma
+    - Reggio Emilia
+    - Perugia
+    - Ravenna
+    - Livorno
+    - Cagliari
+    - Foggia
+    - Rimini
+    - Salerno
+    - Ferrara
+    - Sassari'
+    - Latina
+    - Giugliano in Campania
+    - Monza
+    - Siracusa
+    - Pescara
+    - Bergamo
+    - Forlì
+    - Trento
+    - Vicenza
+    - Terni
+    - Bolzano
+    - Novara
+    - Piacenza
+    - Ancona
+    - Andria
+    - Arezzo
+    - Udine
+    - Cesena
+    - Lecce
+    - Pesaro
+    - Barletta
+    - Alessandria
+    - La Spezia
+    - Pisa
+    - Pistoia
+    - Guidonia Montecelio
+    - Lucca
+    - Catanzaro
+    - Brindisi
+    - Treviso
+    - Busto Arsizio
+    - Como
+    - Marsala
+    - Grosseto
+    - Sesto San Giovanni
+    - Pozzuoli
+    - Varese
+    - Fiumicino
+    - Casoria
+    - Asti
+    - Cinisello Balsamo
+    - Caserta
+    - Gela
+    - Aprilia
+    - Ragusa
+    - Pavia
+    - Cremona
+    - Carpi
+    - Quartu
+    - Lamezia Terme
+    - Altamura
+    - Imola
+    - Aquila
+    - Massa
+    - Trapani
+    - Viterbo
+    - Cosenza
+    - Potenza
+    - Castellammare di Stabia
+    - Afragola
+    - Vittoria
+    - Vigevano
+    - Carrara
+    - Bisceglie
+    - Acerra
+    - Molfetta
+    - Agrigento
+    - Siena
+    - Bitonto
+    - Caltanissetta
+    - Civitavecchia
+    - Provincia
+    - Gorizia
+    - Veneto
+    - Mantova
+    - Puglia
+    - Lombardia
+    - Liguria
+    - Toscana
+    - Sicilia
+    - Emilia-Romagna
+    - Marche
+    - Abruzzo
+    - Campania
+    - Molise
+    - Basilicata
+    - Calabria
+    - Sardegna
+    - Friuli-Venezia Giulia
+    - Umbria
+    - Lazio
+    - Piemonte
+    - Aosta
+    - Trentino-Alto Adige
+    - Sud
+    - Nord
+    - Centro
+    - Mattino
+    - Ticino
+    - Spezia
+    - Cuneo
+    - Imperia
+    - Marino
+    - Biella
+    - Aosta
+    - Verbania
+    - Savona
+    - Canavese
+    - Alessandria
+    - Novara
+    - Avellino
+    - Benevento
+    - Frosinone
+    - Ostia
+    - Rieti
+    - Fermo
+    - Ascoli
+    - Macerata
+    - Trentino
+    - Adige
+    - Rovigo
+    - Anzio
+    - Vercelli
+    - Alba

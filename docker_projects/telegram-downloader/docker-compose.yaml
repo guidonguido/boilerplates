@@ -1,0 +1,63 @@
+version: '3'
+services:
+  message-scraper:
+    image: guidonguido/message-scraper:1.0.0
+    build: ./message-scraper
+    volumes:
+      - db:/db:rw                 # Mountpoint must match config.scraper.db_path/session_path folder
+      - crawljobs:/crawljobs:rw   # Mountpoint must match config.scraper.crawl_job_path folder
+      - message-scraper-config:/config:ro
+  file-uploader:
+    image: guidonguido/file-uploader:1.0.0
+    build: ./file-uploader
+    volumes:
+      - downloads:/downloads  # Mountpoint must match config.uploader.downloads_path folder
+      - db:/db:rw             # Mountpoint must match config.uploader.session_path folder
+      - file-uploader-config:/config:ro
+  jdownloader-2:
+    image: jlesage/jdownloader-2
+    ports:
+      - "5800:5800"
+    volumes:
+      - jdownloader-config:/config:rw
+      - downloads:/output:rw
+      - crawljobs:/folderwatch
+volumes:
+  db:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/usrname/data/telegram-downloader/db'
+      # Must contain file_uploader.session, message_scraper.session
+  crawljobs:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/usrname/data/telegram-downloader/crawljobs'
+  downloads:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/usrname/data/telegram-downloader/downloads'
+  jdownloader-config:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/usrname/docker_projects/telegram-downloader/jdownloader/config'
+  message-scraper-config:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/usrname/docker_projects/telegram-downloader/message-scraper/config'
+  file-uploader-config:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/usrname/docker_projects/telegram-downloader/file-uploader/config'
+      
