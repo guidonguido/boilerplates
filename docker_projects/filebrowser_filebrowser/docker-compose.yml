@@ -10,9 +10,9 @@
           - PGID=1000
 
         volumes:
-          - /home/guido/:/srv
-          - /home/guido/docker_projects/filebrowser_filebrowser/database/filebrowser.db:/database/filebrowser.db
-          - /home/guido/docker_projects/filebrowser_filebrowser/config/settings.json:/config/settings.json
+          - /home/usrname/:/srv
+          - /home/usrname/docker_projects/filebrowser_filebrowser/database/filebrowser.db:/database/filebrowser.db
+          - /home/usrname/docker_projects/filebrowser_filebrowser/config/settings.json:/config/settings.json
         
         # labels:
           # - "traefik.enable=true"

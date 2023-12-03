@@ -10,7 +10,7 @@
           - PGID=1000
 
         volumes:
-          - /home/guido/docker_projects/b4bz_homer/www/assets:/www/assets
+          - /home/usrname/docker_projects/b4bz_homer/www/assets:/www/assets
 
         ports:
           - 8080:8080

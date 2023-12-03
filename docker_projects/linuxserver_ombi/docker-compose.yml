@@ -10,7 +10,7 @@ services:
       - TZ=Europe/Rome
       - BASE_URL=/ombi #optional
     volumes:
-      - /home/guido/docker_projects/linuxserver_jackett/config:/config
+      - /home/usrname/docker_projects/linuxserver_jackett/config:/config
     ports:
       - 3579:3579
     restart: unless-stopped

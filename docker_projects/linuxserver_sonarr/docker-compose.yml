@@ -9,8 +9,8 @@ services:
       - PGID=1000
       - TZ=Europe/Rome
     volumes:
-      - /home/guido/docker_projects/linuxserver_sonarr/config:/config
-      - /home/guido/data:/data
+      - /home/usrname/docker_projects/linuxserver_sonarr/config:/config
+      - /home/usrname/data:/data
     ports:
       - 8989:8989
     restart: unless-stopped

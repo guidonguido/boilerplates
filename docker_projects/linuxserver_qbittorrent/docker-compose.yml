@@ -10,9 +10,9 @@ services:
       - TZ=Europe/Rome
       - WEBUI_PORT=8081
     volumes:
-      - /home/guido/qbittorrent/config:/config
-      # - /home/guido/plex:/downloads
-      - /home/guido/data/torrents:/data/torrents
+      - /home/usrname/qbittorrent/config:/config
+      # - /home/usrname/plex:/downloads
+      - /home/usrname/data/torrents:/data/torrents
     ports:
       - 6881:6881
       - 6881:6881/udp

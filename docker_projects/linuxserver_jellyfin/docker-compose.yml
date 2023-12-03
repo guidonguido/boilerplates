@@ -10,9 +10,9 @@ services:
       - TZ=Europe/Rome
       - JELLYFIN_PublishedServerUrl=93.51.20.186 #optional
     volumes:
-      - /home/guido/docker_projects/linuxserver_jellyfin/config:/config
-      - /home/guido/data/media/tv:/data/tv
-      - /home/guido/data/media/movies:/data/movies
+      - /home/usrname/docker_projects/linuxserver_jellyfin/config:/config
+      - /home/usrname/data/media/tv:/data/tv
+      - /home/usrname/data/media/movies:/data/movies
     ports:
       - 8096:8096
       # - 8920:8920 #optional

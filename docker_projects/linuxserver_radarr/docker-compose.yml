@@ -9,8 +9,8 @@ services:
       - PGID=1000
       - TZ=Europe/Rome
     volumes:
-      - /home/guido/docker_projects/linuxserver_radarr/config:/config
-      - /home/guido/data:/data
+      - /home/usrname/docker_projects/linuxserver_radarr/config:/config
+      - /home/usrname/data:/data
     ports:
       - 7878:7878
     restart: unless-stopped

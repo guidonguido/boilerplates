@@ -11,8 +11,8 @@ services:
       - AUTO_UPDATE=true #optional
       # - RUN_OPTS=<run options here> #optional
     volumes:
-      - /home/guido/docker_projects/linuxserver_jackett/config:/config
-      - /home/guido/data/torrents:/downloads
+      - /home/usrname/docker_projects/linuxserver_jackett/config:/config
+      - /home/usrname/data/torrents:/downloads
     ports:
       - 9117:9117
     restart: unless-stopped
